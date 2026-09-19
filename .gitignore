@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+test_env/
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+scheduler_debug.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Jupyter
+notebooks/.ipynb_checkpoints/
+
+# Secrets
+.env
+.env.*
+
+# Data (optionnel)
+data/raw/
+
+# Models générés
+models/*.pkl
+models/*.joblib
+
+# Scheduler state (optionnel)
+models/scheduler_state.json

@@ -1,0 +1,5 @@
+cluster,size,percentage,dominant_features,category_mean,state_mean
+0,21,21.0,"['category', 'state']",1.2055,0.7726
+1,36,36.0,"['state', 'category']",-0.6504,-0.8276
+2,29,29.0,"['state', 'category']",-0.7358,0.9451
+3,14,14.0,"['category', 'state']",1.3884,-0.9885

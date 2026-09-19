@@ -1,0 +1,26 @@
+{
+    "summary": {
+        "total_rows": 150,
+        "anomaly_count": 55,
+        "anomaly_ratio": 36.67,
+        "severity_counts": {
+            "normal": 95,
+            "faible": 45,
+            "moyen": 9,
+            "critique": 1
+        },
+        "avg_anomaly_score": 0.3383,
+        "max_anomaly_score": 1.0
+    },
+    "config": {
+        "contamination": "auto",
+        "n_estimators": 200,
+        "max_samples": "auto",
+        "pca_sample_size": 10000,
+        "random_state": 42
+    },
+    "artifacts": {
+        "isolation_forest_model_path": "models\\auto_20260730_114520\\anomaly_detection\\isolation_forest_model.pkl",
+        "anomaly_summary_path": "models\\auto_20260730_114520\\anomaly_detection\\anomaly_summary.pkl"
+    }
+}

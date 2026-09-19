@@ -1,0 +1,50 @@
+{
+    "algorithm_used": "KMeans",
+    "is_large_dataset": false,
+    "n_clusters": 4,
+    "metrics": {
+        "silhouette_score": 0.5421,
+        "davies_bouldin_score": 0.6428,
+        "sample_size": 100,
+        "n_clusters": 4
+    },
+    "hdbscan": {
+        "available": true,
+        "n_clusters": 0,
+        "n_noise": 100,
+        "noise_ratio": 100.0,
+        "sample_size": null,
+        "message": "HDBSCAN exécuté avec succès."
+    },
+    "best_k_search": {
+        "best_k": 4,
+        "scores": {
+            "2": 0.452,
+            "3": 0.5016,
+            "4": 0.5421,
+            "5": 0.4844,
+            "6": 0.4443,
+            "7": 0.4317,
+            "8": 0.4313,
+            "9": 0.3754,
+            "10": 0.4268
+        },
+        "best_score": 0.5421,
+        "sample_size": 100
+    },
+    "config": {
+        "large_dataset_threshold": 100000,
+        "hdbscan_sample_size": 30000,
+        "pca_sample_size": 10000,
+        "metrics_sample_size": 10000,
+        "batch_size": 4096,
+        "min_cluster_size": 100,
+        "max_k": 10,
+        "high_noise_ratio_threshold": 40.0,
+        "k_refine_window": 1
+    },
+    "artifacts": {
+        "kmeans_model_path": "models\\ml_20260730_111304\\clustering\\kmeans_model.pkl",
+        "clustering_summary_path": "models\\ml_20260730_111304\\clustering\\clustering_summary.pkl"
+    }
+}

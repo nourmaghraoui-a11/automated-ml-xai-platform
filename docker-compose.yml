@@ -1,0 +1,56 @@
+services:
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: ml_dashboard
+
+    command:
+      - python
+      - -m
+      - streamlit
+      - run
+      - app/dashboard.py
+      - --server.address=0.0.0.0
+      - --server.port=8501
+
+    ports:
+      - "8501:8501"
+
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./reports:/app/reports
+      - ./logs:/app/logs
+      - ./scheduler_config.json:/app/scheduler_config.json
+
+    environment:
+      PYTHONUNBUFFERED: "1"
+
+    restart: unless-stopped
+
+  scheduler:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: ml_scheduler
+
+    command:
+      - python
+      - -u
+      - -m
+      - src.scheduler_service
+
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./reports:/app/reports
+      - ./logs:/app/logs
+      - ./scheduler_config.json:/app/scheduler_config.json
+
+    environment:
+      PYTHONUNBUFFERED: "1"
+
+    restart: unless-stopped

@@ -1,0 +1,33 @@
+{
+    "n_rows": 100,
+    "n_columns": 12,
+    "columns": [
+        "transaction_id",
+        "category",
+        "amt",
+        "gender",
+        "state",
+        "lat",
+        "long",
+        "city_pop",
+        "merch_lat",
+        "merch_long",
+        "is_fraud",
+        "ingested_at"
+    ],
+    "missing_values": {
+        "transaction_id": 0,
+        "category": 0,
+        "amt": 0,
+        "gender": 0,
+        "state": 0,
+        "lat": 0,
+        "long": 0,
+        "city_pop": 0,
+        "merch_lat": 0,
+        "merch_long": 0,
+        "is_fraud": 0,
+        "ingested_at": 0
+    },
+    "duplicated_rows": 0
+}

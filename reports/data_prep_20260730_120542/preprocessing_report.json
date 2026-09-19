@@ -1,0 +1,83 @@
+{
+    "generated_at": "2026-07-30 12:05:42",
+    "pipeline_summary": {
+        "initial_shape": [
+            100,
+            12
+        ],
+        "final_shape": [
+            100,
+            2
+        ],
+        "label_column": "gender",
+        "scaler_used": "StandardScaler",
+        "artifacts_saved_at": "models\\data_prep_20260730_120542\\pipeline_artifacts.pkl"
+    },
+    "features": {
+        "excluded_columns": [
+            "city_pop",
+            "transaction_id",
+            "ingested_at",
+            "gender",
+            "merch_lat",
+            "lat",
+            "is_fraud",
+            "amt",
+            "merch_long",
+            "long"
+        ],
+        "reintegrated_columns": [],
+        "final_features": [
+            "category",
+            "state"
+        ],
+        "n_final_features": 2
+    },
+    "missing_values": [],
+    "dropped_high_missing_columns": [],
+    "categorical_variants_cleaning": {},
+    "skewness": [
+        {
+            "column": "category",
+            "skewness": 0.674,
+            "abs_skewness": 0.674
+        },
+        {
+            "column": "state",
+            "skewness": -0.072,
+            "abs_skewness": 0.072
+        }
+    ],
+    "skew_transformations": [],
+    "outliers_detected": [
+        {
+            "column": "state",
+            "lower_bound": -19.5,
+            "upper_bound": 72.5,
+            "outlier_count": 0,
+            "outlier_ratio": 0.0
+        },
+        {
+            "column": "category",
+            "lower_bound": -6.625,
+            "upper_bound": 18.375,
+            "outlier_count": 0,
+            "outlier_ratio": 0.0
+        }
+    ],
+    "outlier_treatment": [
+        {
+            "column": "state",
+            "outlier_ratio": 0.0,
+            "action": "None"
+        },
+        {
+            "column": "category",
+            "outlier_ratio": 0.0,
+            "action": "None"
+        }
+    ],
+    "removed_low_variance": [],
+    "removed_correlated_features": [],
+    "manual_feature_warnings": []
+}

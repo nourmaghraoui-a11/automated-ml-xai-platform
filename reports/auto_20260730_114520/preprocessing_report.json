@@ -1,0 +1,147 @@
+{
+    "generated_at": "2026-07-30 11:45:20",
+    "pipeline_summary": {
+        "initial_shape": [
+            150,
+            12
+        ],
+        "final_shape": [
+            150,
+            5
+        ],
+        "label_column": "gender",
+        "scaler_used": "StandardScaler",
+        "artifacts_saved_at": "models\\auto_20260730_114520\\pipeline_artifacts.pkl"
+    },
+    "features": {
+        "excluded_columns": [
+            "ingested_at",
+            "gender",
+            "merch_long",
+            "is_fraud",
+            "amt",
+            "merch_lat",
+            "transaction_id"
+        ],
+        "reintegrated_columns": [],
+        "final_features": [
+            "category",
+            "state",
+            "lat",
+            "long",
+            "city_pop"
+        ],
+        "n_final_features": 5
+    },
+    "missing_values": [],
+    "dropped_high_missing_columns": [],
+    "categorical_variants_cleaning": {},
+    "skewness": [
+        {
+            "column": "city_pop",
+            "skewness": 5.615,
+            "abs_skewness": 5.615
+        },
+        {
+            "column": "long",
+            "skewness": -1.192,
+            "abs_skewness": 1.192
+        },
+        {
+            "column": "lat",
+            "skewness": -0.865,
+            "abs_skewness": 0.865
+        },
+        {
+            "column": "category",
+            "skewness": 0.63,
+            "abs_skewness": 0.63
+        },
+        {
+            "column": "state",
+            "skewness": -0.171,
+            "abs_skewness": 0.171
+        }
+    ],
+    "skew_transformations": [
+        {
+            "column": "long",
+            "method": "Yeo-Johnson",
+            "skew_before": 1.192,
+            "skew_after": 0.119
+        },
+        {
+            "column": "city_pop",
+            "method": "Log1p",
+            "skew_before": 5.615,
+            "skew_after": 0.682
+        }
+    ],
+    "outliers_detected": [
+        {
+            "column": "category",
+            "lower_bound": -8.5,
+            "upper_bound": 19.5,
+            "outlier_count": 0,
+            "outlier_ratio": 0.0
+        },
+        {
+            "column": "state",
+            "lower_bound": -19.5,
+            "upper_bound": 72.5,
+            "outlier_count": 0,
+            "outlier_ratio": 0.0
+        },
+        {
+            "column": "lat",
+            "lower_bound": 27.778,
+            "upper_bound": 50.821,
+            "outlier_count": 6,
+            "outlier_ratio": 4.0
+        },
+        {
+            "column": "long",
+            "lower_bound": -3.177,
+            "upper_bound": 3.16,
+            "outlier_count": 0,
+            "outlier_ratio": 0.0
+        },
+        {
+            "column": "city_pop",
+            "lower_bound": 2.779,
+            "upper_bound": 12.621,
+            "outlier_count": 8,
+            "outlier_ratio": 5.33
+        }
+    ],
+    "outlier_treatment": [
+        {
+            "column": "category",
+            "outlier_ratio": 0.0,
+            "action": "None"
+        },
+        {
+            "column": "state",
+            "outlier_ratio": 0.0,
+            "action": "None"
+        },
+        {
+            "column": "lat",
+            "outlier_ratio": 4.0,
+            "action": "None"
+        },
+        {
+            "column": "long",
+            "outlier_ratio": 0.0,
+            "action": "None"
+        },
+        {
+            "column": "city_pop",
+            "outlier_ratio": 5.33,
+            "action": "Winsorized"
+        }
+    ],
+    "removed_low_variance": [],
+    "removed_correlated_features": [],
+    "manual_feature_warnings": []
+}

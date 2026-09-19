@@ -1,0 +1,50 @@
+{
+  "source": {
+    "type": "sql",
+    "path": "data/raw/credit_card_test.db",
+    "query": "SELECT * FROM transactions"
+  },
+  "integration_config": null,
+  "manual_features_to_keep": [],
+  "allow_high_risk_features": false,
+
+  "ml_config": {
+    "enable_clustering": true,
+    "enable_anomaly_detection": true,
+    "use_hdbscan": true,
+    "default_k": 3,
+    "max_k": 10,
+    "contamination": "auto"
+  },
+
+  "interpretation_config": {
+    "compute_stability": true
+  },
+
+  "schedule": {
+    "weekly": {
+      "enabled": true,
+      "day_of_week": "sun",
+      "hour": 2,
+      "minute": 0
+    },
+    "monthly": {
+      "enabled": true,
+      "day": 1,
+      "hour": 3,
+      "minute": 0
+    }
+  },
+
+  "data_change_trigger": {
+    "enabled": true,
+    "threshold_pct": 10,
+    "check_interval_minutes": 1
+  },
+
+  "models_base_dir": "models",
+  "reports_base_dir": "reports",
+  "state_path": "models/scheduler_state.json",
+  "log_path": "logs/scheduler.log",
+  "timezone": "UTC"
+}

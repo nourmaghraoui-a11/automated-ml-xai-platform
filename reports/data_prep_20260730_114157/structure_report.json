@@ -1,0 +1,150 @@
+{
+    "generated_at": "2026-07-30 11:41:57",
+    "dataset_shape": {
+        "n_rows": 100,
+        "n_columns": 12
+    },
+    "columns": [
+        "transaction_id",
+        "category",
+        "amt",
+        "gender",
+        "state",
+        "lat",
+        "long",
+        "city_pop",
+        "merch_lat",
+        "merch_long",
+        "is_fraud",
+        "ingested_at"
+    ],
+    "dtypes": {
+        "transaction_id": "int64",
+        "category": "float64",
+        "amt": "float64",
+        "gender": "float64",
+        "state": "float64",
+        "lat": "float64",
+        "long": "float64",
+        "city_pop": "float64",
+        "merch_lat": "float64",
+        "merch_long": "float64",
+        "is_fraud": "float64",
+        "ingested_at": "str"
+    },
+    "missing_values": {
+        "transaction_id": 0,
+        "category": 0,
+        "amt": 0,
+        "gender": 0,
+        "state": 0,
+        "lat": 0,
+        "long": 0,
+        "city_pop": 0,
+        "merch_lat": 0,
+        "merch_long": 0,
+        "is_fraud": 0,
+        "ingested_at": 0
+    },
+    "detected_structure": {
+        "numeric_columns": [
+            "transaction_id",
+            "category",
+            "amt",
+            "gender",
+            "state",
+            "lat",
+            "long",
+            "city_pop",
+            "merch_lat",
+            "merch_long",
+            "is_fraud"
+        ],
+        "categorical_columns": [
+            "ingested_at"
+        ],
+        "date_columns": [],
+        "id_columns": [
+            "city_pop",
+            "long",
+            "merch_lat",
+            "lat",
+            "merch_long",
+            "transaction_id",
+            "amt"
+        ],
+        "possible_label_columns": [
+            "gender",
+            "is_fraud",
+            "ingested_at"
+        ],
+        "feature_columns": [
+            "category",
+            "state"
+        ],
+        "excluded_columns": [
+            "city_pop",
+            "long",
+            "merch_lat",
+            "gender",
+            "is_fraud",
+            "ingested_at",
+            "lat",
+            "merch_long",
+            "transaction_id",
+            "amt"
+        ]
+    },
+    "possible_labels_info": [
+        {
+            "column": "gender",
+            "score": 3,
+            "unique_values": 2,
+            "reasons": [
+                "Colonne binaire ou quasi-binaire",
+                "Faible ratio de valeurs uniques"
+            ]
+        },
+        {
+            "column": "is_fraud",
+            "score": 6,
+            "unique_values": 1,
+            "reasons": [
+                "Nom contenant le mot-clé 'fraud'",
+                "Colonne binaire ou quasi-binaire",
+                "Faible ratio de valeurs uniques"
+            ]
+        },
+        {
+            "column": "ingested_at",
+            "score": 4,
+            "unique_values": 1,
+            "reasons": [
+                "Colonne binaire ou quasi-binaire",
+                "Faible ratio de valeurs uniques",
+                "Colonne située en dernière position"
+            ]
+        }
+    ],
+    "exclusion_reasons": {
+        "city_pop": "Identifiant détecté automatiquement",
+        "long": "Identifiant détecté automatiquement",
+        "merch_lat": "Identifiant détecté automatiquement",
+        "lat": "Identifiant détecté automatiquement",
+        "merch_long": "Identifiant détecté automatiquement",
+        "transaction_id": "Identifiant détecté automatiquement",
+        "amt": "Identifiant détecté automatiquement",
+        "gender": "Label potentiel détecté automatiquement",
+        "is_fraud": "Label potentiel détecté automatiquement",
+        "ingested_at": "Label potentiel détecté automatiquement"
+    },
+    "summary": {
+        "nb_numeric": 11,
+        "nb_categorical": 1,
+        "nb_dates": 0,
+        "nb_ids": 7,
+        "nb_possible_labels": 3,
+        "nb_features": 2,
+        "nb_excluded": 10
+    }
+}
