@@ -1,7 +1,4 @@
 # 🚀 Automated Explainable Machine Learning Platform
-<p align="center">
-images/banner.png
-</p>
 ## Transforming Raw Data into Actionable Insights
 
 This project is a complete end-to-end Machine Learning platform designed to automate the entire analytical lifecycle of tabular data.
