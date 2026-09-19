@@ -1,305 +1,216 @@
-# 🚀 Automated Machine Learning & Explainable Analytics Platform
+# 🚀 Automated Explainable Machine Learning Platform
+<p align="center">
+images/banner.png
+</p>
+## Transforming Raw Data into Actionable Insights
 
-## Overview
+This project is a complete end-to-end Machine Learning platform designed to automate the entire analytical lifecycle of tabular data.
 
-This project is a modular and automated Machine Learning platform designed to transform raw tabular data into actionable insights through automated data preparation, clustering, anomaly detection, explainable AI (XAI), and interactive analytics dashboards.
+Unlike traditional Machine Learning projects that focus only on model training, this platform covers every stage of the data pipeline:
 
-The platform supports multiple data sources including CSV files, SQL databases, and SQLite databases. It provides a complete analytical workflow from data ingestion to model interpretation and monitoring.
+✅ Data ingestion from CSV and SQL sources
+
+✅ Automated data preparation and feature engineering
+
+✅ Unsupervised Machine Learning and anomaly detection
+
+✅ Explainable AI (XAI) for model transparency
+
+✅ Interactive analytical dashboards
+
+✅ Historical tracking and persistence
+
+✅ Automated scheduling and retraining triggers
+
+✅ Docker-ready deployment architecture
+
+The objective is to enable non-technical and technical users to transform raw business data into understandable, explainable, and actionable insights with minimal manual intervention.
 
 ---
 
-## ✨ Key Features
+## Why This Project Matters
 
-### 📥 Data Ingestion
-- CSV file import
-- SQL and SQLite database connectivity
-- Custom SQL query execution
-- Automatic DataFrame generation
+In many organizations, data analysis is fragmented across multiple tools:
 
-### 🧹 Automated Data Preparation
-- Automatic schema detection
-- Missing value handling
-- Feature engineering
-- Categorical encoding
-- Date processing
-- Feature normalization
-- Feature selection
+- Data extraction tools
+- Data preparation scripts
+- Machine Learning notebooks
+- Monitoring dashboards
+- Manual reporting processes
 
-### 🤖 Machine Learning
+This platform unifies all these steps into a single modular architecture capable of:
+
+- Detecting new data automatically
+- Launching analytical workflows
+- Generating machine learning insights
+- Explaining model decisions
+- Tracking historical executions
+- Presenting results through interactive dashboards
+
+The platform follows a real-world Data Science and MLOps approach by combining Data Engineering, Machine Learning, Explainable AI and application development in a single solution.
+
+---
+
+## Key Capabilities
+
+### Automated Data Engineering
+
+The platform automatically:
+
+- Detects dataset structure
+- Identifies numerical and categorical features
+- Handles missing values
+- Encodes categories
+- Processes dates
+- Selects usable features
+- Produces analysis-ready datasets
+
+### Advanced Machine Learning
+
+The analytical engine supports:
+
 - HDBSCAN clustering
 - K-Means clustering
 - MiniBatchKMeans clustering
 - Isolation Forest anomaly detection
-- Cluster profiling
-- Clustering performance metrics
 
-### 🔍 Explainable AI (XAI)
-- SHAP-based explanations
-- Surrogate Decision Trees
-- Global model explanations
-- Local anomaly explanations
-- Automated recommendations generation
+The system automatically generates:
 
-### 📊 Analytics Dashboards
-- Technical Dashboard
-- Analytical Dashboard
-- KPI visualization
-- Cluster analysis
+- Cluster profiles
+- Segmentation metrics
+- Risk levels
+- Anomaly scores
+
+### Explainable AI (XAI)
+
+One of the strongest aspects of the platform is its explainability layer.
+
+Rather than producing black-box predictions, the platform provides:
+
+- Global cluster explanations
+- SHAP-based local explanations
+- Surrogate decision trees
+- Feature importance analysis
+- Automated interpretations
+- Actionable recommendations
+
+### Business Intelligence Dashboards
+
+Two dedicated Streamlit environments provide:
+
+#### Technical Dashboard
+
+Designed for data analysts and engineers:
+
+- Data import
+- Schema inspection
+- Feature validation
+- Dataset preparation
+- Technical reports
+
+#### Analytical Dashboard
+
+Designed for decision makers:
+
+- KPI monitoring
+- Cluster exploration
 - Anomaly investigation
-- Historical run tracking
+- XAI visualizations
+- Historical run analysis
 
-### ⏱️ Scheduler & Monitoring
-- Automated pipeline execution
-- Data growth detection
-- Configurable triggers
-- Execution logging
-- State persistence
+### Automated Monitoring & Scheduling
 
-### 💾 Data Warehouse
-- Run history management
-- Metrics storage
-- Model tracking
-- Report archiving
-- Artifact management
+A dedicated scheduler continuously monitors incoming data.
 
-### 🐳 Deployment Ready
-- Docker support
-- Docker Compose integration
-- Modular architecture
+When a configurable threshold is exceeded, the platform automatically:
+
+1. Detects new records
+2. Launches preprocessing
+3. Executes Machine Learning pipelines
+4. Generates reports
+5. Updates dashboards
+6. Stores results in the warehouse
+
+This simulates a real production analytics workflow.
 
 ---
 
-## 🏗️ Architecture
+## High-Level Architecture
 
 ```text
-CSV / SQL / SQLite
-          │
-          ▼
-   Data Ingestion
-          │
-          ▼
- Data Preparation
-          │
-          ▼
- Machine Learning
-          │
-          ▼
- Explainable AI
-          │
-          ▼
+CSV / SQL Sources
+         │
+         ▼
+ Data Ingestion
+         │
+         ▼
+ Automated Feature Engineering
+         │
+         ▼
+ Machine Learning Engine
+         │
+         ├──────── Clustering
+         │
+         ├──────── Anomaly Detection
+         │
+         ▼
+ Explainable AI Layer
+         │
+         ▼
  Streamlit Dashboards
-          │
-          ▼
+         │
+         ▼
  Data Warehouse
-          │
-          ▼
+         │
+         ▼
  Automated Scheduler
 ```
 
 ---
 
-## 🛠️ Tech Stack
+## Technologies
 
-### Programming Language
 - Python
-
-### Data Processing
 - Pandas
 - NumPy
-
-### Machine Learning
 - Scikit-Learn
 - HDBSCAN
-
-### Anomaly Detection
-- Isolation Forest
-
-### Explainable AI
 - SHAP
-- Surrogate Models
-
-### Visualization
-- Plotly
-
-### Dashboard Development
 - Streamlit
-
-### Storage
+- Plotly
 - SQLite
-
-### Scheduling
 - APScheduler
-
-### Deployment
 - Docker
 - Docker Compose
 
 ---
 
-## 📂 Project Structure
-
-```text
-project/
-│
-├── app/
-│   ├── dashboard.py
-│   └── pages/
-│
-├── src/
-│   ├── ingestion.py
-│   ├── preprocessing.py
-│   ├── structure_detector.py
-│   ├── clustering.py
-│   ├── anomaly.py
-│   ├── interpretation.py
-│   ├── warehouse.py
-│   ├── scheduler_service.py
-│   └── ...
-│
-├── data/
-├── models/
-├── reports/
-├── logs/
-├── diagrams/
-│
-├── requirements.txt
-├── Dockerfile
-├── docker-compose.yml
-└── README.md
-```
-
----
-
-## ⚙️ Installation
-
-### Clone the repository
-
-```bash
-git clone https://github.com/your-username/automated-ml-xai-platform.git
-
-cd automated-ml-xai-platform
-```
-
-### Create a virtual environment
-
-```bash
-python -m venv .venv
-```
-
-### Activate the environment
-
-Windows:
-
-```bash
-.venv\Scripts\activate
-```
-
-Linux / macOS:
-
-```bash
-source .venv/bin/activate
-```
-
-### Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
-## ▶️ Run the Application
-
-### Launch Streamlit Dashboard
-
-```bash
-streamlit run app/dashboard.py
-```
-
-Access the application at:
-
-```text
-http://localhost:8501
-```
-
----
-
-## ⏳ Run the Scheduler
-
-```bash
-python -u -m src.scheduler_service
-```
-
-The scheduler automatically:
-
-- Monitors data growth
-- Detects threshold overruns
-- Triggers ML pipelines
-- Stores execution history
-- Updates dashboard data
-
----
-
-## 📈 Machine Learning Workflow
-
-```text
-Raw Data
-    ↓
-Data Cleaning
-    ↓
-Feature Engineering
-    ↓
-Feature Selection
-    ↓
-Clustering
-    ↓
-Anomaly Detection
-    ↓
-Explainable AI
-    ↓
-Analytics Dashboard
-```
-
----
-
-## 🎯 Skills Demonstrated
+## Skills Demonstrated
 
 This project demonstrates competencies in:
 
 - Data Engineering
-- Data Analytics
 - Machine Learning
 - Explainable AI (XAI)
-- Unsupervised Learning
-- Dashboard Development
-- Software Architecture
 - MLOps Fundamentals
-- Data Warehousing
-- Docker Containerization
+- Data Visualization
+- Dashboard Development
+- SQL & Data Warehousing
+- Software Architecture
+- Workflow Automation
+- Containerization with Docker
 
 ---
 
-## 🚀 Future Improvements
+## Internship Context
 
-- User authentication and role management
-- PostgreSQL integration
-- REST API development
-- Automated testing with PyTest
-- Notification system
-- Cloud deployment
-- Conversational AI assistant
-- Monitoring and observability tools
+This project was developed during an internship focused on Data Science, Machine Learning and Analytics Automation.
+
+The objective was to design a reusable analytical framework capable of processing multiple datasets while providing transparency, traceability and automation throughout the Machine Learning lifecycle.
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 **Nour Maghraoui**
-
-Third-Year Student in Big Data & Data Analytics
-
----
-
-## ⚠️ Disclaimer
-
-This repository contains a demonstration version of the project developed during an internship. Any confidential company data, proprietary assets, or sensitive information have been removed before publication.
+Big Data & Data Analytics Student
